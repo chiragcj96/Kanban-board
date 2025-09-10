@@ -1,12 +1,68 @@
-# React + Vite
+# 🗂️ Kanban Board
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack Kanban board application built with **React (Vite)** for the frontend and **Node.js/Express** for the backend.  
+Users can manage tasks in a drag-and-drop board, with persistence powered by the backend API.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+- ✅ Modern UI with **React + Vite**
+- ✅ Backend API with **Node.js/Express**
+- ✅ RESTful API integration
+- ✅ Easy local setup
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📦 Project Structure
+```
+Kanban-board/
+├── frontend/     # React + Vite app
+├── backend/      # Node.js/Express API
+└── README.md     # You are here
+```
+
+---
+
+## 🛠️ Getting Started
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/chiragcj96/Kanban-board.git
+cd Kanban-board
+```
+
+### 2. Setup Backend
+```bash
+cd backend
+npm install
+npm start
+```
+
+- Runs on: `http://localhost:5000` (default)  
+- API base URL: `http://localhost:5000/api`
+
+### 3. Setup Frontend
+Open a new terminal:
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+- Runs on: `http://localhost:5173` (default)  
+- Update `frontend/.env` to point to your backend:
+  ```env
+  VITE_API_URL=http://localhost:5000
+  ```
+
+---
+
+## 📖 API Endpoints (example)
+| Method | Endpoint          | Description       |
+|--------|------------------|-------------------|
+| GET    | `/api/tasks`     | Get all tasks     |
+| POST   | `/api/tasks`     | Create new task   |
+| PUT    | `/api/tasks/:id` | Update a task     |
+| DELETE | `/api/tasks/:id` | Delete a task     |
+
+---
